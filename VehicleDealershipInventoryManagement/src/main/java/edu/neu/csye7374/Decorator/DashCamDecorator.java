@@ -4,7 +4,7 @@ import edu.neu.csye7374.Vehicle;
 import edu.neu.csye7374.VehicleAPI;
 
 public class DashCamDecorator extends VehicleDecorator {
-    public DashcamDecorator(VehicleAPI decoratedVehicle) {
+    public DashCamDecorator(VehicleAPI decoratedVehicle) {
         super(decoratedVehicle);
         // TODO Auto-generated constructor stub
     }
