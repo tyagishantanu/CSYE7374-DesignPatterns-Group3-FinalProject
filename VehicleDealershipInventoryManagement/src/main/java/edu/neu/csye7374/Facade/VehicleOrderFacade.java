@@ -2,6 +2,7 @@ package edu.neu.csye7374.Facade;
 
 import edu.neu.csye7374.Decorator.Insurance;
 import edu.neu.csye7374.Decorator.VehicleDecorator;
+import edu.neu.csye7374.Observer.VehicleOrder;
 import edu.neu.csye7374.VehicleAPI;
 
 public class VehicleOrderFacade {

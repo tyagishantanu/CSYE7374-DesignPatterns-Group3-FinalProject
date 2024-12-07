@@ -5,10 +5,12 @@ import java.util.*;
 
 import edu.neu.csye7374.VehicleAPI;
 import edu.neu.csye7374.Facade.VehicleDeliveryType;
+import edu.neu.csye7374.Strategy.*;
 import edu.neu.csye7374.State.VehicleDelivered;
 import edu.neu.csye7374.State.VehicleDelivery;
 import edu.neu.csye7374.State.VehicleDeliveryStateAPI;
 import edu.neu.csye7374.State.VehicleOrderConfirmed;
+import edu.neu.csye7374.Strategy.OfferStrategy;
 
 public class VehicleOrder implements VehicleDeliveryStateAPI {
     private int vehicleId;

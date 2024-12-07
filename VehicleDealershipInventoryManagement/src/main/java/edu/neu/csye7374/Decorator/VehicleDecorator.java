@@ -16,11 +16,6 @@ public class VehicleDecorator implements VehicleAPI {
         return decoratedVehicle.vehicleDescription();
     }
 
-    @Override
-    public int noOfVehilcesRented() {
-        // TODO Auto-generated method stub
-        return decoratedVehicle.noOfVehiclesRented();
-    }
 
     public VehicleAPI getDecoratedVehicle() {
         return this.decoratedVehicle;
@@ -67,4 +62,10 @@ public class VehicleDecorator implements VehicleAPI {
     public VehicleCategory getVehicleCategory() {
         return this.decoratedVehicle.getVehicleCategory();
     }
+
+	@Override
+	public int noOfVehiclesRented() {
+		// TODO Auto-generated method stub
+		return decoratedVehicle.noOfVehiclesRented();
+	}
 }
