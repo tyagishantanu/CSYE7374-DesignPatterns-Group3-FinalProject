@@ -6,3 +6,4 @@
 2,C-Class,Sedan,Porche,45000.0
 3,D-Class,Sports,Porche,49000.0
 4,M-Class,MiniVan,Porche,60000.0
+5,prius,SUV,honda,5600.0
