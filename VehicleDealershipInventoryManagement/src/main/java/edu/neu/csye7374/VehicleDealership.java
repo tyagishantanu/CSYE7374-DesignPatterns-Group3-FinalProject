@@ -24,7 +24,7 @@ public class VehicleDealership {
     private List<Vehicle> itemList = new ArrayList<>();
     private List<Person> personList = new ArrayList<>();
     public static OfferStrategy usingStrategy = OfferStrategy.NONE;
-    private static final String FILE_NAME = "src/main/java/edu/neu/csye7374/datastore/VehiclesData.txt";
+    private static final String FILE_NAME = "VehicleDealershipInventoryManagement/src/main/java/edu/neu/csye7374/datastore/VehiclesData.txt";
 
     private static Map<OfferStrategy, OfferStrategyAPI> strategyMap = new HashMap<>();
     {
@@ -137,9 +137,9 @@ public class VehicleDealership {
 
         vehicleBuilder = new VehicleBuilder(2, "C-Class", 45000.0, VehicleCategory.Sedan, "Porche");
         vehicle = VehicleFactory.getInstance().getObject(vehicleBuilder);
-        VehicleDecorator carWithSeatDecorator = new SeatCoverDecorator(vehicle);
-        System.out.println(carWithSeatDecorator);
-        order.addVehicle(carWithSeatDecorator);
+        VehicleDecorator vehicleWithSeatDecorator = new SeatCoverDecorator(vehicle);
+        System.out.println(vehicleWithSeatDecorator);
+        order.addVehicle(vehicleWithSeatDecorator);
         System.out.println("");
         System.out.println(order);
         System.out.println("");
@@ -184,10 +184,10 @@ public class VehicleDealership {
         System.out.println("----------- Command Pattern ------------");
         System.out.println("");
         Invoker invoker = new Invoker();
-        System.out.println("######## Sold Cars #########");
+        System.out.println("######## Sold Vehicles #########");
         invoker.placeVehicleOrders(vehicleList);
         System.out.println("");
-        System.out.println("######## Rented Cars #########");
+        System.out.println("######## Rented Vehicles #########");
         invoker.rentVehicleOrders(vehicleList);
         System.out.println("");
         System.out.println("" + ".".repeat(30) + "Pattern Demo End" + ".".repeat(30));
