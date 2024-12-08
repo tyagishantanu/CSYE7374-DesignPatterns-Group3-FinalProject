@@ -1,53 +1,53 @@
 package edu.neu.csye7374.Command;
 
-import edu.neu.csye7374.Car;
+import edu.neu.csye7374.Vehicle;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class Invoker {
-    private List<Car> orderList = new ArrayList<>();
+    private List<Vehicle> orderList = new ArrayList<>();
 
-    public void takeCarOrder(Car order) {
+    public void takeVehicleOrder(Vehicle order) {
         orderList.add(order);
     }
 
-    public void placeCarOrders() {
-        BuyVehicleCommand buyCarCommand = BuyVehicleCommand.getInstance();
-        for (Car order : orderList) {
-            System.out.println(buyCarCommand.setCar(order).execute());
+    public void placeVehicleOrders() {
+        BuyVehicleCommand buyVehicleCommand = BuyVehicleCommand.getInstance();
+        for (Vehicle order : orderList) {
+            System.out.println(buyVehicleCommand.setVehicle(order).execute());
         }
         orderList.clear();
     }
 
-    public void placeCarOrders(List<Car> carList) {
-        for (Car b : carList) {
+    public void placeVehicleOrders(List<Vehicle> vehicleList) {
+        for (Vehicle b : vehicleList) {
             orderList.add(b);
         }
-        placeCarOrders();
+        placeVehicleOrders();
     }
 
-    public void rentCarOrders() {
-        RentVehicleCommand rentCarCommand = RentVehicleCommand.getInstance();
-        for (Car order : orderList) {
-            System.out.println(rentCarCommand.setCar(order)
+    public void rentVehicleOrders() {
+        RentVehicleCommand rentVehicleCommand = RentVehicleCommand.getInstance();
+        for (Vehicle order : orderList) {
+            System.out.println(rentVehicleCommand.setVehicle(order)
                     .execute());
         }
         orderList.clear();
     }
 
-    public void rentCarOrders(List<Car> carList) {
-        for (Car b : carList) {
+    public void rentVehicleOrders(List<Vehicle> vehicleList) {
+        for (Vehicle b : vehicleList) {
             orderList.add(b);
         }
-        rentCarOrders();
+        rentVehicleOrders();
     }
 
-    public List<Car> getCarOrderList() {
+    public List<Vehicle> getVehicleOrderList() {
         return orderList;
     }
 
-    public void setCarOrderList(List<Car> orderList) {
+    public void setVehicleOrderList(List<Vehicle> orderList) {
         this.orderList = orderList;
     }
 

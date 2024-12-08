@@ -96,9 +96,9 @@ public class FileUtil {
             bw = new BufferedWriter(fr);
             bw.append(vehicleBuilder.getVehicleId() + ",");
             bw.append(vehicleBuilder.getVehicleName() + ",");
-            bw.append(vehicleBuilder.getVehiclePrice() + ",");
             bw.append(vehicleBuilder.getVehicleCategory() + ",");
-            bw.append(vehicleBuilder.getVehicleManufacturer() + "\n");
+            bw.append(vehicleBuilder.getVehicleManufacturer() + ",");
+            bw.append(vehicleBuilder.getVehiclePrice() + "\n");
         } catch (IOException ex) {
             LOGGER.log(Level.SEVERE, "error while reading the file", ex);
         } finally {

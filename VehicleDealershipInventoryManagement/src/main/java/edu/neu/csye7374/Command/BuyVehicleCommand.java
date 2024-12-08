@@ -1,8 +1,10 @@
 package edu.neu.csye7374.Command;
 
+import edu.neu.csye7374.Vehicle;
+
 public class BuyVehicleCommand implements CommandAPI {
     private static BuyVehicleCommand instance;
-    private Car car;
+    private Vehicle vehicle;
 
     private BuyVehicleCommand() {
         super();
@@ -17,15 +19,15 @@ public class BuyVehicleCommand implements CommandAPI {
 
     @Override
     public String execute() {
-        return car.buyCar();
+        return vehicle.buyVehicle();
     }
 
-    public Car getCar() {
-        return car;
+    public Vehicle getVehicle() {
+        return vehicle;
     }
 
-    public BuyVehicleCommand setCar(Car car) {
-        this.car = car;
+    public BuyVehicleCommand setVehicle(Vehicle vehicle) {
+        this.vehicle = vehicle;
         return this;
     }
 }
